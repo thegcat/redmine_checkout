@@ -1,6 +1,6 @@
-<% form_tag({:action => 'edit', :tab => 'checkout'}) do %>
+<%= form_tag({:action => 'edit', :tab => 'checkout'}) do %>
 
-<% javascript_tag do %>
+<%= javascript_tag do %>
 protocolForms = $H();
 
 document.observe("dom:loaded", function() {
