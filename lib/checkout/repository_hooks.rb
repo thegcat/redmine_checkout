@@ -28,7 +28,7 @@ module Checkout
       })
 
       options = {:partial => "redmine_checkout_hooks/view_repositories_show_contextual"}
-      context[:controller].send(:render_to_string, {:locals => context}.merge(options))
+      context[:hook_caller].send(:render, {:locals => context}.merge(options))
     end
     alias_method :view_repositories_list_contextual, :view_repositories_show_contextual
   end

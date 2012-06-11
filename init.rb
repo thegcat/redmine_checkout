@@ -1,8 +1,7 @@
 require 'redmine'
 
-require 'dispatcher'
-Dispatcher.to_prepare do
-  # Patches
+
+Rails.configuration.to_prepare do
   require_dependency 'checkout/settings_controller_patch'
 
   require_dependency 'checkout/repositories_helper_patch'
@@ -18,7 +17,7 @@ require 'checkout/repository_hooks'
 Redmine::Plugin.register :redmine_checkout do
   name 'Redmine Checkout plugin'
   url 'http://dev.holgerjust.de/projects/redmine-checkout'
-  author 'Holger Just'
+  author 'Holger Just ()'
   author_url 'http://meine-er.de'
   description 'Add links to the actual repository to the repository view.'
   version '0.5'
@@ -65,7 +64,7 @@ EOF
     })]
   end
 
-  settings :default => settings_defaults, :partial => 'settings/redmine_checkout'
+  settings :default => settings_defaults, :partial => 'redmine_checkout'
 
   Redmine::WikiFormatting::Macros.register do
     desc <<-EOF
