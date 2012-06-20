@@ -22,8 +22,7 @@ Redmine::Plugin.register :redmine_checkout do
   description 'Add links to the actual repository to the repository view.'
   version '0.5'
 
-  # required because of the new i18n requirement and changed syntax
-  requires_redmine :version_or_higher => '1.0.5'
+  requires_redmine :version_or_higher => '2.0.3'
 
   settings_defaults = HashWithIndifferentAccess.new({
     'use_zero_clipboard' => '1',
