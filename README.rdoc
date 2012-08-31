@@ -1,7 +1,7 @@
 = Redmine Checkout plugin
 
-Original Author:: Holger Just
-Original URL:: http://dev.holgerjust.de/projects/redmine-checkout
+Original Author: Holger Just
+Original URL: http://dev.holgerjust.de/projects/redmine-checkout
 
 This plugin to Redmine adds a link to the actual repository to the GUI.
 
@@ -40,5 +40,5 @@ This plugin targets Redmine 2.0:
    of the directory is <tt>redmine_checkout</tt>.
 2. Go to the <tt>redmine_checkout</tt> directory and run <tt>bundle install</tt> to install (almost) all the dependencies.
 3. Install the <tt>redmine_plugin_support</tt> gem (the missing dependency).
-4. Run <tt>rake db:migrate_plugins RAILS_ENV=production</tt> at Rails' root directory.
+4. Run <tt>rake redmine:plugins:migrate RAILS_ENV=production</tt> at Rails' root directory.
 5. Restart Redmine.
