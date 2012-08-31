@@ -1,7 +1,7 @@
 = Redmine Checkout plugin
 
-Author:: Holger Just
-URL:: http://dev.holgerjust.de/projects/redmine-checkout
+Original Author:: Holger Just
+Original URL:: http://dev.holgerjust.de/projects/redmine-checkout
 
 This plugin to Redmine adds a link to the actual repository to the GUI.
 
