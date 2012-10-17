@@ -14,6 +14,9 @@ end
 # Hooks
 require 'checkout/repository_hooks'
 
+# Helpers
+require 'checkout/view_helper'
+
 Redmine::Plugin.register :redmine_checkout do
   name 'Redmine Checkout plugin'
   url 'https://github.com/hanjos/redmine_checkout'
