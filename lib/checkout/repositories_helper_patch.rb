@@ -20,6 +20,7 @@ module Checkout
       end
 
       def scm_select_tag_with_javascript(*args)
+        heads_for_wiki_formatter
         content_for :header_tags do
           javascript_include_tag('subform', :plugin => 'redmine_checkout') +
           stylesheet_link_tag('checkout', :plugin => 'redmine_checkout')
