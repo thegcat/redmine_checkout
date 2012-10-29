@@ -10,6 +10,12 @@ module Checkout
       base.class_eval do
         unloadable
         serialize :checkout_settings, Hash
+        
+        safe_attributes 'checkout_settings',
+          'checkout_overwrite',
+          'checkout_description',
+          'checkout_protocols',
+          'checkout_display_command'
       end
     end
 

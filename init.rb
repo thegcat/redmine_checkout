@@ -98,7 +98,7 @@ EOF
       raise "Checkout protocol #{proto} not found" unless proto_obj
 
       cmd = (project.repository.checkout_display_command? && proto_obj.command.present?) ? proto_obj.command.strip + " " : ""
-      cmd + link_to(proto_obj.url, proto_obj.url)
+      (cmd + link_to(proto_obj.url, proto_obj.url)).html_safe
     end
   end
 end
