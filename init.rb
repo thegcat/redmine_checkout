@@ -12,10 +12,10 @@ Rails.configuration.to_prepare do
 end
 
 # Hooks
-require 'checkout/repository_hooks'
+require File.expand_path('lib/checkout/repository_hooks', __dir__)
 
 # Helpers
-require 'checkout/view_helper'
+require File.expand_path('lib/checkout/view_helper', __dir__)
 
 Redmine::Plugin.register :redmine_checkout do
   name 'Redmine Checkout plugin'
@@ -25,7 +25,7 @@ Redmine::Plugin.register :redmine_checkout do
   description 'Add links to the actual repository to the repository view.'
   version '0.6-BETA'
 
-  requires_redmine :version_or_higher => '2.0.3'
+  requires_redmine :version_or_higher => '5.0'
 
   settings_defaults = HashWithIndifferentAccess.new({
     'use_zero_clipboard' => '1',
@@ -40,7 +40,7 @@ EOF
   })
 
   # this is needed for setting the defaults
-  require 'checkout/repository_patch'
+  require File.expand_path('lib/checkout/repository_patch', __dir__)
 
   CheckoutHelper.supported_scm.each do |scm|
     klazz = Repository.const_get(scm)

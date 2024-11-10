@@ -1,5 +1,5 @@
 require_dependency 'repository'
-require_dependency 'checkout_helper'
+require_dependency File.expand_path('../checkout_helper', __dir__)
 
 module Checkout
   module RepositoryPatch
