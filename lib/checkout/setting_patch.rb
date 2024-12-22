@@ -6,8 +6,6 @@ module Checkout
       base.extend(ClassMethods)
       
       base.class_eval do
-        unloadable
-        
         # Defines getter and setter for each setting
         # Then setting values can be read using: Setting.some_setting_name
         # or set using Setting.some_setting_name = "some value"
